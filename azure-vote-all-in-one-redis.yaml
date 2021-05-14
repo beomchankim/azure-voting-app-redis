@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: azure-vote-front
-        image: mcr.microsoft.com/azuredocs/azure-vote-front:v1
+        image: acrcontainerrepo.azurecr.io/azure-vote-front:v10
         ports:
         - containerPort: 80
         resources:
