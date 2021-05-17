@@ -22,7 +22,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                sh 'docker build -t $WEB_IMAGE_NAME ./azure-vote'
+                sh 'docker build -t ${WEB_IMAGE_NAME} ./azure-vote'
             }
             post {
                 success {
@@ -47,7 +47,7 @@ pipeline {
         stage('Push') {
             steps {
                 echo 'Push'
-                sh 'docker push $WEB_IMAGE_NAME'
+                sh 'docker push ${WEB_IMAGE_NAME}'
             }
             post {
                 success {
