@@ -1,7 +1,10 @@
-def WEB_IMAGE_NAME = "${ACR_LOGINSERVER}/azure-vote-front:kube${BUILD_NUMBER}"
-
 pipeline {
     agent any 
+    
+    environment {
+        WEB_IMAGE_NAME = "${ACR_LOGINSERVER}/azure-vote-front:kube${BUILD_NUMBER}"
+    }
+    
     stages {
         stage('Git Pull') {
             steps {
