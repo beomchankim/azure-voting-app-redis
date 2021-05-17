@@ -58,7 +58,7 @@ pipeline {
             }
         }
         
-        stage('Push') {
+        stage('set image') {
             steps {
                 echo 'Push'
                 sh 'kubectl set image deployment/azure-vote-front azure-vote-front=${WEB_IMAGE_NAME}'            }
