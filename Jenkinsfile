@@ -1,5 +1,5 @@
 pipeline {
-    agent { slave }
+    agent any
     
     environment {
         WEB_IMAGE_NAME = "${ACR_LOGINSERVER}/azure-vote-front:kube${BUILD_NUMBER}"
